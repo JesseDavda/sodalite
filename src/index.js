@@ -1,4 +1,4 @@
-const useBooleanState = require('./src/useBooleanState');
+import { useBooleanState } from './useBooleanState';
 
 export {
     useBooleanState

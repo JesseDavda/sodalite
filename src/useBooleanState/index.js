@@ -1,7 +1,13 @@
 import { useState } from 'react';
 
-export const useBooleanState = ({ initalState = false }) => {
-    const [ booleanState, setBooleanState ] = useState(initalState);
+export const useBooleanState = ({
+    initialState = false,
+    useStateDep = useState,
+} = {}) => {
+    if(typeof initialState !== "boolean")
+        throw new Error("'initilState' was set as a non-boolean value");
+
+    const [booleanState, setBooleanState] = useStateDep(initialState);
 
     const toggle = () => setBooleanState(!booleanState);
     const setTrue = () => setBooleanState(true);
@@ -11,6 +17,6 @@ export const useBooleanState = ({ initalState = false }) => {
         value: booleanState,
         toggle,
         setTrue,
-        setFalse
-    }
-}
+        setFalse,
+    };
+};
