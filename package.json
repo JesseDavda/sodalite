@@ -1,0 +1,13 @@
+{
+  "name": "Tango",
+  "version": "1.0.1",
+  "description": "A library of helpful react hooks",
+  "main": "index.js",
+  "repository": "https://github.com/JesseDavda/Tango",
+  "author": "JesseDavda <jessedavda@protonmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}
