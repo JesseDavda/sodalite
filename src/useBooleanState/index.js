@@ -1,19 +1,11 @@
-const { useState } = require('react');
+import { useState } from 'react';
 
-const useBooleanState = ({ initalState = false }) => {
+export const useBooleanState = ({ initalState = false }) => {
     const [ booleanState, setBooleanState ] = useState(initalState);
 
-    const toggle = () => {
-        setBooleanState(!booleanState);
-    }
-
-    const setTrue = () => {
-        setBooleanState(true);
-    }
-
-    const setFalse = () => {
-        setBooleanState(false);
-    }
+    const toggle = () => setBooleanState(!booleanState);
+    const setTrue = () => setBooleanState(true);
+    const setFalse = () => setBooleanState(false);
 
     return {
         value: booleanState,
@@ -22,5 +14,3 @@ const useBooleanState = ({ initalState = false }) => {
         setFalse
     }
 }
-
-export default useBooleanState;
