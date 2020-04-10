@@ -1,6 +1,6 @@
 {
   "name": "sodalite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library of helpful react hooks",
   "main": "dist/index.js",
   "repository": "https://github.com/JesseDavda/Tango",
@@ -10,6 +10,9 @@
   "scripts": {
     "build": "rm -rf ./dist && babel src --out-dir dist"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@babel/runtime": "^7.9.2"
   },
@@ -20,11 +23,11 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "babel-cli": "^6.26.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.8.6",
+    "react": "^16.8.6"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
